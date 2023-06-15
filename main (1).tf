@@ -1,10 +1,13 @@
-resource "aws_instance" "ec2_instance" {
-  ami           = "ami-0889a44b331db0194"
+provider "aws" {
+  access_key = "AKIA5BMGLEQ52H54DAYC"
+  secret_key = "h7isLqMy+a9iyD/qAC0dOQwavxNnCjFq/6Z5CQx4"
+  region     = "ca-central-1"
+}
+resource "aws_instance" "example" {
+  ami           = "ami-08947f251e1b8f3b9"
   instance_type = "t2.micro"
-  subnet_id     = "subnet-0f6b75e2f6f138395"
-  key_name      = "SRD786"
+
   tags = {
-    Name = "Soubhagya"
+    Name = "priya-instance"
   }
 }
-
